@@ -1,0 +1,42 @@
+{
+  "agents": {
+    "defaults": {
+      "model": {
+        "primary": "deepseek/deepseek-chat"
+      }
+    }
+  },
+  "commands": {
+    "native": "auto",
+    "nativeSkills": "auto",
+    "restart": true
+  },
+  "channels": {
+    "telegram": {
+      "enabled": true,
+      "dmPolicy": "pairing",
+      "botToken": "<TU_TOKEN_TELEGRAM>",
+      "groupPolicy": "allowlist",
+      "streamMode": "partial"
+    }
+  },
+  "gateway": {
+    "port": 18789,
+    "mode": "local",
+    "bind": "lan",
+    "auth": {
+      "mode": "token",
+      "token": "<TU_PASSWORD_SEGURO_PARA_WEB>"
+    },
+    "controlUi": {
+      "allowedOrigins": ["*"]
+    }
+  },
+  "plugins": {
+    "entries": {
+      "telegram": {
+        "enabled": true
+      }
+    }
+  }
+}
