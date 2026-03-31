@@ -1,0 +1,13 @@
+services:
+  openclaw:
+    image: ghcr.io/openclaw/openclaw:latest
+    container_name: openclaw
+    restart: always
+    ports:
+      - "18789:18789"
+    volumes:
+      - ./data:/home/node/.openclaw
+    environment:
+      - DEEPSEEK_API_KEY=<TU_CLAVE_DEEPSEEK>
+      - OPENAI_API_KEY=<TU_CLAVE_OPENAI>
+      - OPENCLAW_GATEWAY_TOKEN=<TU_PASSWORD_SEGURO_PARA_WEB>
